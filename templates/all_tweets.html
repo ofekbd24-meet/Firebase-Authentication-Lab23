@@ -1,0 +1,10 @@
+{% for tweet in tweets %}
+<div>
+	<h2>{{tweet["title"]}}</h1>
+	<p>{{tweets[tweet]["text"]}}</p>
+	<p>{{tweets[tweet]["timestamp"]}}</p>
+	<form action="/like/tweet" method="POST">
+		<input type="submit" value="{{tweets[tweet]['likes']}}">
+	</form>
+</div>
+{% endfor %}
